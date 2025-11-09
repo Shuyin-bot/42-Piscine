@@ -12,13 +12,19 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char mahdi)
+void	ft_putchar_fd(char mahdi, int fd)
 {
-	write(1, &mahdi, 1);
+	write(fd, &mahdi, 1);
 }
 
-/*int	main(void)
+/*
+#include <fcntl.h>
+
+int	main(void)
 {
-	ft_putchar('s');
+	int fd;
+	char file = "testout.txt" 
+	fd = open(file, O_WRONLY);	
+	ft_putchar_fd('s');
 	return (0);
 }*/
